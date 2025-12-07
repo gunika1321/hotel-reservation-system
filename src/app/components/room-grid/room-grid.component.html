@@ -1,0 +1,13 @@
+<div class="layout">
+    <div class="staircase">STAIRS / LIFT</div>
+    <div class="grid">
+        <div *ngFor="let f of floors()" class="floor-row">
+            <div class="floor-label">F {{f}}</div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <div *ngFor="let r of roomsByFloor(f)" [ngClass]="classFor(r)" (click)="onToggle(r.id)">
+                    <div>{{r.id}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

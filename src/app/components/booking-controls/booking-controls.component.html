@@ -1,0 +1,26 @@
+<div class="controls-card">
+    <div class="controls-row">
+        <label>
+            <div style="font-weight:600; margin-bottom:6px;">No of Rooms</div>
+            <input type="number" class="input-number" [(ngModel)]="roomsToBook" min="1" max="5" />
+        </label>
+
+
+        <button class="btn btn-primary" (click)="doBook()">Book</button>
+        <button class="btn btn-ghost" (click)="randomize.emit()">Random</button>
+        <button class="btn btn-ghost" (click)="reset.emit()">Reset</button>
+
+
+        <div class="legend">
+            <div class="item">
+                <div class="sw" style="background:var(--available)"></div> Available
+            </div>
+            <div class="item">
+                <div class="sw" style="background:var(--booked)"></div> Booked
+            </div>
+            <div class="item">
+                <div class="sw" style="background:var(--random)"></div> Random
+            </div>
+        </div>
+    </div>
+</div>
